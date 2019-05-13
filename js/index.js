@@ -136,7 +136,7 @@ $(document).on({
                 break;
         }
     },
-    touchmove: e => e.preventDefault()
+    // touchmove: e => e.preventDefault()
 });
 
 $('[data-scroll-to]').on('click', e => {
@@ -148,7 +148,7 @@ $('[data-scroll-to]').on('click', e => {
 })
 
 if (isMobile) {
-    $("#test").swipe({
+    $(document).swipe({
         //Generic swipe handler for all directions
         swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
             const swipeDirection = direction === 'down' ? 'up' : 'down';
